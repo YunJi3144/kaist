@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <style>
+        html {
+            font-size: 10px;
+        }
+        body {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            color: red;
+        } /* 20 x 2 = 40 */
+        section {
+            font-size: 2em;
+        } /* 20 x 2 = 40 */
+        .p1 {
+            font-size: 2rem;
+        } /* rem => root 기준 em
+             ㄴ 20px */
+        .p2 {
+            font-size: 2em;
+        } /* 40 x 2 = 80 */
+        .p2 strong {
+            font-size: 1em;
+        } /* 80 x 2 = 160 */
+        .ex1 {
+            display: none;
+        }
+        .ex2 {
+            padding: 150px 100px;
+            background: #dedede;
+        }
+        .ex2 .tabmenu_wrap {
+            border: 1px solid #000;
+        }
+        .ex2 .tabs {
+            background: pink
+            ;display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            font-size: 26px;
+        }
+        .ex2 .tabs a {
+            padding: 10px 15px;
+
+        }
+        .ex2 .contents {
+            background: #FFF;
+            padding: 50px;
+        }
+        .ex2 .contents .conbox {
+            border: 1px solid red;
+            padding: 40px;
+            margin-bottom: 30px;
+            display: none;
+        }
+        #con1 {
+            background: skyblue;
+            display: block;
+        }
+        #con2 {
+            background: steelblue;
+        }
+        #con3 {
+            background: slateblue;
+        }
+        #con3 img {
+            width: 200px;
+        }
+        #con4 {
+            background: salmon;
+        }
+
+        /* 필기 예시 */
+
+        html {
+            font-size: 10px;
+        }
+        #wrap {
+            padding: 3rem;
+        } /* 30px, rem을 쓰면 알아서 반응형에 적용됨
+        디폴드 값으로 적용되나 바꾸고 싶다면 써주기 */
+        @media screen and (max-width: 1280px) {
+            html {font-size: 8px;}
+            #wrap {padding: 3.2rem;} /* 26 */
+        }
+        @media screen and (max-width: 430px) {
+            html {font-size: 6px;}
+            #wrap {padding: 3rem;} /* 18 */
+        }
+
+        .ex3_container {
+            background: slateblue;
+            max-width: 1280px;
+            margin: auto;
+            padding: 7rem 2rem;
+        }
+        .ex3 .footer1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #FFF;
+        }
+        .ex3 .fam_site {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #FFF;
+        }
+        .ex3 .fam_site li {
+            display: none;
+        }
+
+        @media screen and (max-width: 840px) {
+            .ex3 .footer1 {
+                flex-direction: column-reverse;
+                gap: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ex1">
+        <h1>헤딩 1 태그 입니다.</h1>
+        <section>
+            <p class="p1">p1 클래스를 가진 p 태그입니다.</p>
+            <p class="p2">
+                p2 클래스를 가진 p 태그입니다.
+                <strong>[strong 태그]</strong>
+            </p>
+        </section>
+    </div>
+    <div class="ex2">
+        <h2>탭메뉴 구조</h2>
+        <div class="tabmenu_wrap">
+            <div class="tabs">
+                <a href="#" class="tab1">삼양라면</a>
+                <a href="#" class="tab2">닭볶음면</a>
+                <a href="#" class="tab3">맵탱</a>
+                <a href="#" class="tab4">잭앤펄스</a>
+            </div>
+            <div class="contents">
+                <div class="conbox" id="con1">
+                    <ul>
+                        <li>list-1</li>
+                        <li>list-2</li>
+                        <li>list-3</li>
+                    </ul>
+                </div>
+                <div class="conbox" id="con2">
+                    <p>아아아아아아</p>
+                    <p>아아아아아아</p>
+                </div>
+                <div class="conbox" id="con3">
+                    <img src="img/main/faculty_03_crop_auto_fix_600_804.64.png" alt="">
+                </div>
+                <div class="conbox" id="con4">
+                    <ul>
+                        <li>list-1</li>
+                        <li>list-2</li>
+                        <li>list-3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ex3">
+        <div class="ex3_container">
+            <div class="footer1">
+                <div class="footer_menu">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">윤리경영</a>
+                </div>
+                <div class="fam_site">
+                    <button>FAMILY SITE<i class="ri-arrow-up-s-line"></i></button>
+                    <ul>
+                        <li><a href="#">family site</a></li>
+                        <li><a href="https://www.jiransoft.co.kr/">지란지교소프트</a></li>
+                        <li><a href="https://www.jirandata.co.kr/">지란지교데이터</a></li>
+                        <li><a href="https://www.jiranpartners.com/">지란지교파트너스</a></li>
+                        <li><a href="https://jiran.jp/">지란재팬</a></li>
+                        <li><a href="https://www.ssrinc.co.kr/">에스에스알</a></li>
+                        <li><a href="http://www.mobigen.com/">모비젠</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.ex2 h2').style.color = 'blue';
+        
+        let tab1 = document.querySelector('.tab1');
+        let tab2 = document.querySelector('.tab2');
+        let tab3 = document.querySelector('.tab3');
+        let tab4 = document.querySelector('.tab4');
+
+        tab1.addEventListener('click', function() {
+            document.querySelector('#con1').style.display = 'block';
+            document.querySelector('#con2').style.display = 'none';
+            document.querySelector('#con3').style.display = 'none';
+            document.querySelector('#con4').style.display = 'none';
+        })
+        tab2.addEventListener('click', function() {
+            document.querySelector('#con2').style.display = 'block';
+            document.querySelector('#con1').style.display = 'none';
+            document.querySelector('#con3').style.display = 'none';
+            document.querySelector('#con4').style.display = 'none';
+        })
+        tab3.addEventListener('click', function() {
+            document.querySelector('#con3').style.display = 'block';
+            document.querySelector('#con1').style.display = 'none';
+            document.querySelector('#con2').style.display = 'none';
+            document.querySelector('#con4').style.display = 'none';
+        })
+        tab4.addEventListener('click', function() {
+            document.querySelector('#con4').style.display = 'block';
+            document.querySelector('#con1').style.display = 'none';
+            document.querySelector('#con2').style.display = 'none';
+            document.querySelector('#con3').style.display = 'none';
+        })
+    </script>
+</body>
+</html>
